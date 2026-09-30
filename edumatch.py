@@ -45,10 +45,10 @@ class BienvenidaScreen(Screen):
             self.rect = Rectangle(size=self.size, pos=self.pos)
         self.bind(size=self.actualizar_rect, pos=self.actualizar_rect)
  
-        layout = BoxLayout(orientation='vertical', spacing=20, padding=50)
+        layout = BoxLayout(orientation='vertical', spacing=40, padding=60)
  
         try:
-            layout.add_widget(Image(source='shared image.jpg', size_hint=(1, 0.6), allow_stretch=True))
+            layout.add_widget(Image(source='shared image.jpg', size_hint=(1.5, 1), allow_stretch=True))
         except:
             layout.add_widget(Label(text="(Logo)", size_hint=(1, 0.6), color=textColor))
  
