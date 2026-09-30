@@ -148,15 +148,15 @@ class RegistrarScreen(Screen):
         self.layout.add_widget(Label(text="Registrar", font_size=24, color=textColor))
  
         # Campo: user's name
-        self.new_usuario = TextInput(hint_text="Ingresa nobre de usuario", multiline=False, size_hint=(1, 0.2), font_size=18,
+        self.new_usuario = TextInput(hint_text="Nuevo usuario", multiline=False, size_hint=(1, 0.2), font_size=18,
                                      foreground_color=textColor, background_color=(0.9, 0.9, 0.9, 1),
                                      cursor_color=textColor)
  
-        self.new_email = TextInput(hint_text="Ingresa tu correo", multiline=False, size_hint=(1, 0.2), font_size=18,
+        self.new_email = TextInput(hint_text="Nuevo correo", multiline=False, size_hint=(1, 0.2), font_size=18,
                                      foreground_color=textColor, background_color=(0.9, 0.9, 0.9, 1),
                                      cursor_color=textColor)
         
-        self.new_clave = TextInput(hint_text="Crea tu contraseña", password=True, multiline=False, size_hint=(1, 0.2),
+        self.new_clave = TextInput(hint_text="Nueva contraseña", password=True, multiline=False, size_hint=(1, 0.2),
                                    font_size=18, foreground_color=textColor, background_color=(0.9, 0.9, 0.9, 1),
                                    cursor_color=textColor)
  
@@ -191,7 +191,7 @@ class RegistrarScreen(Screen):
             self.mostrar_popup("Error", "Este usuario ya existe.")
         else:
             usuarios[user] = pwd
-            self.mostrar_popup("Éxito", "Usuario registrado con éxito. ¡Bienvenido!")
+            self.mostrar_popup("Éxito", "Usuario registrado con éxito.")
             self.new_usuario.text = ''
             self.new_clave.text = ''
             self.manager.transition.direction = 'right'
@@ -304,7 +304,7 @@ class SaludScreen(Screen):
         contenido.bind(minimum_height=contenido.setter('height'))
 
         contenido.add_widget(Label(
-            text="Universidad de El Salvador",
+            text="UES",
             font_size=20,
             color=textColor,
             size_hint=(1, None),
