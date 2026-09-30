@@ -23,6 +23,7 @@ SecondButonColor = (0.95, 0.6, 0.2, 1)
 usuarios = {
     "Lisseth": "2008",
     "user": "abcd"
+    "claudia": "2009"
 }
  
 def redondear_boton(boton, color):
