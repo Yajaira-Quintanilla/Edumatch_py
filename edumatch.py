@@ -39,7 +39,7 @@ def redondear_boton(boton, color):
 class BienvenidaScreen(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
- 
+
         with self.canvas.before:
             Color(*backgroundColor)
             self.rect = Rectangle(size=self.size, pos=self.pos)
@@ -124,7 +124,7 @@ class LoginScreen(Screen):
             self.clave.text = ''
         else:
             popup = Popup(title="Error",
-                          content=Label(text="Usuario o contraseña incorrectos.", color=(1, 1, 1, 1)),
+                          content=Label(text="La contraseña es incorrecta, verifique que esta correctamente escrita.", color=(1, 1, 1, 1)),
                           size_hint=(0.6, 0.3))
             popup.open()
  
@@ -304,7 +304,7 @@ class SaludScreen(Screen):
         contenido.bind(minimum_height=contenido.setter('height'))
 
         contenido.add_widget(Label(
-            text="UES",
+            text="Universidad de El Salvador",
             font_size=20,
             color=textColor,
             size_hint=(1, None),
